@@ -66,6 +66,6 @@ jobs:
 
       - name: Push Changes
         if: env.changes == 'true'
-        run: git push origin HEAD:master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: |
+          git remote set-url origin https://rohityadav-sas:${{ secrets.GH_PAT }}@github.com/rohityadav-sas/ipo-reminder-bot.git
+          git push origin HEAD:master
