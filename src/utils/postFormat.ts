@@ -11,16 +11,16 @@
  */
 export function formatIpoMessage(ipo: any): string {
 	return (
-		`━━━━━━━━━━━━━━━━━━━━━━\n` +
+		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
 		`📢 *New ${ipo.shareTypeName} Alert!*\n` +
-		`━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
 		`🏢 *Company:* \`${ipo.companyName}\`\n\n` +
 		`📌 *Share Type:* \`${ipo.shareTypeName}\`\n` +
 		`📊 *Share Group:* \`${ipo.shareGroupName}\`\n` +
 		`📁 *Sub Group:* \`${ipo.subGroup}\`\n\n` +
 		`📅 *Issue Open:* \`${ipo.issueOpenDate}\`\n` +
 		`⏳ *Issue Close:* \`${ipo.issueCloseDate}\`\n\n` +
-		`━━━━━━━━━━━━━━━━━━━━━━\n` +
+		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
 		`🚀 Stay updated with the latest IPOs! 🚀`
 	);
 }
