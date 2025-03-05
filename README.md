@@ -17,7 +17,7 @@ A lightweight Telegram bot that automatically posts new IPO (Initial Public Offe
 ## 📸 **Preview**
 
 <div align="center">
-  <img src="./assets/preview.jpg?raw=true" style="" height="600"/>
+  <img src="./assets/preview.jpg?raw=true" height="700"/>
 </div>
 
 ## 🚀 **Features**
