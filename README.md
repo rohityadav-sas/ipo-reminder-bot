@@ -52,8 +52,9 @@ A lightweight Telegram bot that automatically posts new IPO (Initial Public Offe
 ### 1️⃣ Clone the repository
 
 ```sh
-git clone https://github.com/your-username/ipo-telegram-bot.git
-cd ipo-telegram-bot
+git clone https://github.com/rohityadav-sas/ipo-reminder-bot.git
+
+cd ipo-reminder-bot
 ```
 
 ### 2️⃣ Install dependencies
@@ -68,10 +69,15 @@ Create a `.env` file in the root directory and add the following environment var
 
 ```sh
 USER=your_meroshare_username
+
 PASSWORD=your_meroshare_password
+
 CLIENT_ID=your_meroshare_client_id
+
 BOT_TOKEN=your_telegram_bot_token
+
 CHANNEL_ID=your_telegram_channel_id
+
 ADMIN=your_telegram_account_id
 ```
 
@@ -81,19 +87,16 @@ ADMIN=your_telegram_account_id
 npm start
 ```
 
-## 🛠 **Usage**
-
-- The bot runs automatically at scheduled times and posts the latest IPO updates to the Telegram channel.
-- It logs all activities, including errors, in `logs/bot.log`.
-- Errors are reported to the admin (your Telegram account).
-- You can also run the bot manually using `npm start`.
-
 ## 🔍 **How It Works**
 
 - **Authentication**: The bot logs in using MeroShare API credentials.
+
 - **Fetch IPOs**: It retrieves IPOs from the API and compares them with stored data.
+
 - **Check for New IPOs**: If new IPOs are found, they are saved and posted to Telegram.
+
 - **Post to Telegram**: IPOs are sent to the Telegram channel using the official API.
+
 - **Error Logging & Reporting**: Any errors are logged in `logs/bot.log` and sent to the admin (`70701293`).
 
 ## Dependencies

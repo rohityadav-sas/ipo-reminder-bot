@@ -1,0 +1,65 @@
+name: ipo-reminder-Bot
+
+on:
+  workflow_dispatch: # Manually trigger the workflow
+  schedule:
+    - cron: '0 4-11 * * *' # Runs at 10AM - 5PM Nepal Time (UTC 4AM - 11AM)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run the bot
+        run: npm start
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          USER: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          ADMIN: ${{ secrets.ADMIN }}
+
+      - name: Check for Changes
+        run: |
+          git add .
+          if git diff --quiet HEAD; then
+            echo "No changes detected."
+            echo "changes=false" >> $GITHUB_ENV
+          else
+            echo "Changes detected."
+            echo "changes=true" >> $GITHUB_ENV
+          fi
+
+      - name: Configure Git
+        if: env.changes == 'true'
+        run: |
+          git config --global user.name "Rohit Yadav"
+          git config --global user.email "rohityadav.se@example.com"
+
+      - name: Commit Changes
+        if: env.changes == 'true'
+        run: |
+          git commit -m "Auto-commit: Detected changes"
+
+      - name: Push Changes
+        if: env.changes == 'true'
+        run: git push origin HEAD:master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

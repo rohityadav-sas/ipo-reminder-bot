@@ -22,5 +22,5 @@ export const getFormattedTimestamp = (): string => {
 	const formattedDate = dateFormatter.format(now);
 	const formattedTime = timeFormatter.format(now);
 
-	return `[${formattedDate}] [${formattedTime}]`;
+	return `[${formattedDate}] [${formattedTime}]\n`;
 };
