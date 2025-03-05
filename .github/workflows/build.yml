@@ -1,4 +1,4 @@
-name: ipo-reminder-Bot
+name: ipo-reminder-bot
 
 on:
   workflow_dispatch: # Manually trigger the workflow
