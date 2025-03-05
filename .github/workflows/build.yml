@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Run the bot
-        run: npm deploy
+        run: npm run deploy
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           USER: ${{ secrets.USER }}
