@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "tsc && node --env-file=.env build//index.js",
+		"build": "tsc",
 		"deploy": "node build//index.js"
 	},
 	"keywords": [],
