@@ -1,17 +1,23 @@
 {
 	"name": "ipo-telegram-bot",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "build//index.js",
 	"type": "module",
 	"scripts": {
 		"start": "tsc && node --env-file=.env build//index.js",
 		"build": "tsc",
 		"deploy": "node build//index.js"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": "",
+	"keywords": [
+		"ipo-reminder",
+		"nepse",
+		"ipo-alerts",
+		"ipo-updates",
+		"ipo-telegram-bot"
+	],
+	"author": "Rohit Yadav",
+	"license": "MIT",
+	"description": "IPO Telegram Bot to get latest IPOs from NEPSE",
 	"dependencies": {
 		"@types/node": "^22.13.9",
 		"axios": "^1.8.1"
