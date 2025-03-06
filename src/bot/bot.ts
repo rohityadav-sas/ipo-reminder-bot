@@ -19,7 +19,7 @@ export const checkAndNotifyNewIPOs = async () => {
 		const newIPOs = compareIPOs(existingIPOs, IPOs);
 
 		if (newIPOs.length > 0) {
-			logMessage('Sending Telegram update...');
+			logMessage('Sending Telegram utepdate...');
 			newIPOs.forEach(async (ipo) => {
 				logMessage(`New IPO found: ${ipo.companyName}`);
 				const message = formatIpoMessage(ipo);
