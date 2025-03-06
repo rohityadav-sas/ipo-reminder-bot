@@ -6,7 +6,7 @@ export const sendTelegramUpdate = async (message: string): Promise<any> => {
 		await axios.post(url, {
 			chat_id: process.env.CHANNEL_ID,
 			text: message,
-			parse_mode: 'Markdown'
+			parse_mode: 'HTML'
 		});
 		console.log('Message sent to Telegram channel successfully.');
 	} catch (error) {

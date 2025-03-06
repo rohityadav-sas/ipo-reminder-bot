@@ -26,7 +26,7 @@ export const checkAndNotifyNewIPOs = async () => {
 				await sendTelegramUpdate(message);
 			});
 			logMessage('Telegram update sent successfully.');
-			const allIPOs = [...existingIPOs, ...IPOs];
+			const allIPOs = [...existingIPOs, ...newIPOs];
 			saveToJSON(allIPOs, 'data/ipos.json');
 			logMessage('IPOs saved to file.', 'END');
 		} else {

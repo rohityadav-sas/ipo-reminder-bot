@@ -1,3 +1,5 @@
+import { IPOData } from '../types/ipoTypes.js';
+
 /**
  * Formats IPO details into a structured Telegram message.
  * @param {Object} ipo - The IPO object containing details.
@@ -9,17 +11,18 @@
  * @param {string} ipo.issueCloseDate - IPO closing date.
  * @returns {string} - The formatted IPO message.
  */
-export function formatIpoMessage(ipo: any): string {
+export function formatIpoMessage(ipo: IPOData): string {
 	return (
-		`📢 *New ${ipo.shareTypeName} Alert!*\n` +
-		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-		`🏢 *Company:* ___${ipo.companyName}___\n\n` +
-		`📌 *Share Type:* ___${ipo.shareTypeName}___\n` +
-		`📊 *Share Group:* ___${ipo.shareGroupName}___\n` +
-		`📁 *Sub Group:* ___${ipo.subGroup}___\n\n` +
-		`📅 *Issue Open:* ___${ipo.issueOpenDate}___\n` +
-		`⏳ *Issue Close:* ___${ipo.issueCloseDate}_\n\n` +
-		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-		`🚀 Stay updated with the latest IPOs! 🚀`
+		`📢 <b>New ${ipo.shareTypeName} Alert!</b>\n` +
+		`<b>━━━━━━━━━━━━━━━━━━━━━━━</b>\n\n` +
+		`🏢 <b>Company:</b> <i>${ipo.companyName}</i>\n\n` +
+		`📌 <b>Share Type:</b> <i>${ipo.shareTypeName}</i>\n\n` +
+		`📊 <b>Share Group:</b> <i>${ipo.shareGroupName}</i>\n\n` +
+		`📁 <b>Sub Group:</b> <i>${ipo.subGroup}</i>\n\n` +
+		`📅 <b>Issue Open:</b> <i>${ipo.issueOpenDate}</i>\n\n` +
+		`⏳ <b>Issue Close:</b> <i>${ipo.issueCloseDate}</i>\n\n` +
+		`<b>━━━━━━━━━━━━━━━━━━━━━━━</b>\n` +
+		`🔥 <b>Don't miss out! Stay updated! 🚀</b>` +
+		`<b>━━━━━━━━━━━━━━━━━━━━━━━</b>\n`
 	);
 }
