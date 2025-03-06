@@ -11,7 +11,6 @@
  */
 export function formatIpoMessage(ipo: any): string {
 	return (
-		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
 		`📢 *New ${ipo.shareTypeName} Alert!*\n` +
 		`━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
 		`🏢 *Company:* \`${ipo.companyName}\`\n\n` +
