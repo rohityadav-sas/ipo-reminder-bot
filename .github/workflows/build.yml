@@ -3,7 +3,7 @@ name: ipo-reminder-bot
 on:
   workflow_dispatch: # Manually trigger the workflow
   schedule:
-    - cron: '0 4-11 * * *' # Runs at 10AM - 5PM Nepal Time (UTC 4AM - 11AM)
+    - cron: '25 4,6,8,10 * * *' # Run every 2 hours between 10:10 am and 4:10 pm
 
 jobs:
   build:
@@ -26,7 +26,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --omit=dev
 
       - name: Build
         run: npm run build
