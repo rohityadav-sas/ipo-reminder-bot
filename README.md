@@ -88,11 +88,13 @@ npm start
 
 - **Post to Telegram**: IPOs are sent to the Telegram channel using the official API.
 
-- **Error Logging & Reporting**: Any errors are logged in `logs/bot.log` and sent to the admin (`70701293`).
+- **Error Logging & Reporting**: Any errors are logged in `logs/bot.log` and sent to the admin.
 
 ## Dependencies
 
 - **[axios](https://www.npmjs.com/package/axios)** - Promise based HTTP client for the browser and node.js
+
+- **[puppeteer](https://www.npmjs.com/package/puppeteer)** - Headless Chrome Node.js API
 
 ## License
 
