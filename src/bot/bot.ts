@@ -65,9 +65,15 @@ export const checkAndNotifyNewIPOs = async () => {
 		const newResults: string[] = compareIPOs(existingResults, results);
 		await logAndSendUpdates(newResults, formatIPOresultMessage, 'IPO result');
 
-		saveToJSON([...newIPOs, ...existingIPOs], DATA_FILES.ipos);
+		if (newIPOs.length > 0) {
+			saveToJSON([...newIPOs, ...existingIPOs], DATA_FILES.ipos);
+			logMessage('IPOs saved to JSON files');
+		}
 		saveToJSON(results, DATA_FILES.results);
-		logMessage('Data saved to JSON files', 'END');
+		if (newResults.length > 0) {
+			logMessage('IPO results saved to JSON files');
+		}
+		logMessage('Script exection completed.', 'END');
 	} catch (error) {
 		console.error('Error in execution:', error);
 		await reportError(String(error));
