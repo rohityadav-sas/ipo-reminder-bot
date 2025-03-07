@@ -26,7 +26,7 @@ A lightweight Telegram bot that automatically posts new IPO (Initial Public Offe
 - **Posts IPOs** to a Telegram channel.
 - **Runs Automatically** at:
   ```
-  ⏰ 10 AM, 11 AM, 12 PM, 1 PM, 2 PM, 3 PM, 4 PM, 5 PM (Nepal Time)
+  ⏰ 10:10 AM, 12:10 PM, 2:10 PM, 4:10 PM (Nepal Time)
   ```
 - **Logs Errors & Activity** in `logs/bot.log`.
 - **Reports Errors** to the admin (your Telegram account).
