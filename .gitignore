@@ -1,3 +1,5 @@
 node_modules
 .env
 build
+.cache/puppeteer/chrome
+.cache/puppeteer/chrome-headless-shell
