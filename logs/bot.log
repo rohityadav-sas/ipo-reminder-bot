@@ -256,3 +256,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Monday, March 10, 2025] [02:18 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: MBL Equity Fund
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
