@@ -685,3 +685,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Tuesday, March 18, 2025] [10:24 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+No new IPO found.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Crest Micro Life Insurance Limited
+Telegram updates for IPO result sent successfully.
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
