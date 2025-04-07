@@ -1792,3 +1792,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Monday, April 07, 2025] [10:24 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: 7% NIC  Asia Debenture 2091
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
