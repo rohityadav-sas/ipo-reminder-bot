@@ -2639,3 +2639,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Tuesday, April 22, 2025] [04:25 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: Reliable Samriddhi Yojana
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
