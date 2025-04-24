@@ -2712,3 +2712,23 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Thursday, April 24, 2025] [10:26 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: 7% RBBL Debenture 2088
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Pure Energy Ltd.
+Telegram updates for IPO result sent successfully.
+IPOs saved to JSON files
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
