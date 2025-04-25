@@ -2802,3 +2802,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Friday, April 25, 2025] [02:27 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: 7% RBBL Debenture 2088
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
