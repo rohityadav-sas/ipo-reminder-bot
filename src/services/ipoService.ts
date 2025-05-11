@@ -1,4 +1,5 @@
 import axios from 'axios';
+import https from 'https';
 import { endpoints } from '../config/config.js';
 import { IPOData, ipoRequestPayload } from '../types/ipoTypes.js';
 
@@ -24,8 +25,9 @@ export const fetchIPOs = async (token: string): Promise<IPOData[]> => {
 		};
 
 		const { data } = await axios.post(endpoints.IPO, payload, {
-			headers: { Authorization: token }
-		});
+			headers: { Authorization: token },
+			httpsAgent: new https.Agent({ rejectUnauthorized: false })
+		},);
 
 		if (!data || !data.object || !Array.isArray(data.object)) {
 			throw new Error('Unexpected API response format');
