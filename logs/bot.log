@@ -26,3 +26,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Monday, May 12, 2025] [10:27 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+No new IPO found.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Trade Tower Ltd.(FOREIGN EMPLOYMENT)
+Telegram updates for IPO result sent successfully.
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
