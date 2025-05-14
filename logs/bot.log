@@ -169,3 +169,21 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Wednesday, May 14, 2025] [02:28 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+No new IPO found.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Sanvi Energy Limited(Project Affected Area)
+New IPO result: Sanvi Energy Limited(FOREIGN EMPLOYMENT)
+Telegram updates for IPO result sent successfully.
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
