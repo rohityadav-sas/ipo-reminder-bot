@@ -5,6 +5,14 @@
     "shareTypeName": "IPO",
     "shareGroupName": "Ordinary Shares",
     "issueOpenDate": "May 28, 2025 10:00:00 AM",
+    "issueCloseDate": "Jun 3, 2025 5:00:00 PM"
+  },
+  {
+    "subGroup": "For General Public",
+    "companyName": "Trade Tower Ltd.",
+    "shareTypeName": "IPO",
+    "shareGroupName": "Ordinary Shares",
+    "issueOpenDate": "May 28, 2025 10:00:00 AM",
     "issueCloseDate": "Jun 2, 2025 5:00:00 PM"
   },
   {
