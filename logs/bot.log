@@ -1319,3 +1319,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Wednesday, June 04, 2025] [10:30 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: Nifra Harit Urja Debenture 6%-2088/89
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
