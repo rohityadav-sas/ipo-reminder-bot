@@ -1650,3 +1650,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Monday, June 09, 2025] [04:28 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+No new IPO found.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Sanvi Energy Limited(General Public)
+Telegram updates for IPO result sent successfully.
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
