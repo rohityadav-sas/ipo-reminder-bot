@@ -1709,3 +1709,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Tuesday, June 10, 2025] [04:27 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: Prabhu Systematic Investment Scheme
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
