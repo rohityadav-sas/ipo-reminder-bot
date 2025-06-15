@@ -1953,3 +1953,20 @@ Error occurred, reported to admin.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Sunday, June 15, 2025] [12:29 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+No new IPO found.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Trade Tower Ltd. (General Public)
+Telegram updates for IPO result sent successfully.
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
