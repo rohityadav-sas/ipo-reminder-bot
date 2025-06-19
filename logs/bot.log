@@ -2180,3 +2180,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Thursday, June 19, 2025] [12:32 PM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+No new IPO found.
+Checking IPO results...
+IPO results fetched successfully.
+Sending Telegram updates for new IPO result...
+New IPO result: Bikash Hydropower Company Ltd. (Foreign Employment)
+Telegram updates for IPO result sent successfully.
+IPO results saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
