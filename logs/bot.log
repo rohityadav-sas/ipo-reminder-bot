@@ -3115,3 +3115,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Sunday, July 06, 2025] [10:33 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: Global IME Samunnat Yojana -II
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
