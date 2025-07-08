@@ -3230,3 +3230,20 @@ Script exection completed.
 
 -----------------------------------------------------------------------------------------------------------------------
 
+[Tuesday, July 08, 2025] [10:32 AM]
+
+Logging in...
+Logged in successfully.
+Fetching IPOs...
+Fetched IPOs successfully.
+Sending Telegram updates for new IPO...
+New IPO: Him Star Urja Company Ltd.
+Telegram updates for IPO sent successfully.
+Checking IPO results...
+IPO results fetched successfully.
+No new IPO result found.
+IPOs saved to JSON files
+Script exection completed.
+
+-----------------------------------------------------------------------------------------------------------------------
+
