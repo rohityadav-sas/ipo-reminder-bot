@@ -13,5 +13,5 @@ export const logMessage = (
 			'\n-----------------------------------------------------------------------------------------------------------------------\n\n';
 	}
 	console.log(logEntry);
-	fs.appendFileSync(LOG_FILE_PATH, logEntry, { encoding: 'utf-8' });
+	// fs.appendFileSync(LOG_FILE_PATH, logEntry, { encoding: 'utf-8' });
 };
