@@ -124,7 +124,8 @@ const handleIPOResults = async () => {
 
 export const checkAndNotifyNewIPOs = async () => {
 	// Run both IPO fetching and IPO results checking concurrently
-	await Promise.all([handleIPOFetching(), handleIPOResults()])
-
-	logMessage("Script execution completed.", "END")
+	Promise.all([handleIPOFetching(), handleIPOResults()]).then(() => {
+		logMessage("Script execution completed.", "END")
+		return
+	})
 }
