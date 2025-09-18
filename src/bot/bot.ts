@@ -21,8 +21,7 @@ const getServerDownMessage = (error: unknown): string | null => {
 	// Check for connection timeout errors
 	if (
 		errorString.includes("net::ERR_CONNECTION_TIMED_OUT") ||
-		errorString.includes("ERR_NETWORK_CHANGED") ||
-		errorString.includes("ERR_INTERNET_DISCONNECTED") ||
+		errorString.includes("ETIMEDOUT") ||
 		errorString.includes("ERR_CONNECTION_REFUSED")
 	) {
 		// Extract website URL from error message
@@ -32,6 +31,9 @@ const getServerDownMessage = (error: unknown): string | null => {
 			return `Server down at ${websiteName}`
 		}
 		return "Server connection failed"
+	}
+	if (errorString.includes("Timeout")) {
+		return "Navigation Timeout Puppeteer"
 	}
 
 	return null
@@ -85,7 +87,7 @@ const handleIPOFetching = async () => {
 
 		const serverDownMessage = getServerDownMessage(error)
 		if (serverDownMessage) {
-			await reportError(`IPO fetching failed: ${serverDownMessage}`)
+			await reportError(`${serverDownMessage}`)
 			logMessage(`IPO fetching failed: ${serverDownMessage}`)
 		} else {
 			await reportError(`IPO fetching error: ${String(error)}`)
@@ -112,7 +114,7 @@ const handleIPOResults = async () => {
 
 		const serverDownMessage = getServerDownMessage(error)
 		if (serverDownMessage) {
-			await reportError(`IPO results checking failed: ${serverDownMessage}`)
+			await reportError(`${serverDownMessage}`)
 			logMessage(`IPO results checking failed: ${serverDownMessage}`)
 		} else {
 			await reportError(`IPO results error: ${String(error)}`)
