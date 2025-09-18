@@ -5,6 +5,14 @@
     "shareTypeName": "IPO",
     "shareGroupName": "Ordinary Shares",
     "issueOpenDate": "Sep 15, 2025 10:00:00 AM",
+    "issueCloseDate": "Sep 21, 2025 5:00:00 PM"
+  },
+  {
+    "subGroup": "For General Public",
+    "companyName": "Sagar Distillery Limited",
+    "shareTypeName": "IPO",
+    "shareGroupName": "Ordinary Shares",
+    "issueOpenDate": "Sep 15, 2025 10:00:00 AM",
     "issueCloseDate": "Sep 18, 2025 5:00:00 PM"
   },
   {

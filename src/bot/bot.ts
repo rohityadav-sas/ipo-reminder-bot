@@ -15,6 +15,28 @@ const DATA_FILES = {
 	results: "data/ipoResults.json",
 }
 
+const getServerDownMessage = (error: unknown): string | null => {
+	const errorString = String(error)
+
+	// Check for connection timeout errors
+	if (
+		errorString.includes("net::ERR_CONNECTION_TIMED_OUT") ||
+		errorString.includes("ERR_NETWORK_CHANGED") ||
+		errorString.includes("ERR_INTERNET_DISCONNECTED") ||
+		errorString.includes("ERR_CONNECTION_REFUSED")
+	) {
+		// Extract website URL from error message
+		const urlMatch = errorString.match(/https?:\/\/([^\/\s]+)/i)
+		if (urlMatch) {
+			const websiteName = urlMatch[1]
+			return `Server down at ${websiteName}`
+		}
+		return "Server connection failed"
+	}
+
+	return null
+}
+
 const logAndSendUpdates = async <T>(
 	items: T[],
 	formatFn: (item: T) => string,
@@ -40,8 +62,7 @@ const logAndSendUpdates = async <T>(
 	logMessage(`Telegram updates for ${type} sent successfully.`)
 }
 
-export const checkAndNotifyNewIPOs = async () => {
-	// Handle IPO fetching and notifications
+const handleIPOFetching = async () => {
 	try {
 		logMessage("Logging in...")
 		const token = await login()
@@ -61,11 +82,18 @@ export const checkAndNotifyNewIPOs = async () => {
 		}
 	} catch (error) {
 		console.error("Error in IPO fetching:", error)
-		await reportError(`IPO fetching error: ${String(error)}`)
-		logMessage("Error occurred in IPO fetching, continuing with IPO results...")
-	}
 
-	// Handle IPO results independently
+		const serverDownMessage = getServerDownMessage(error)
+		if (serverDownMessage) {
+			await reportError(`IPO fetching failed: ${serverDownMessage}`)
+			logMessage(`IPO fetching failed: ${serverDownMessage}`)
+		} else {
+			await reportError(`IPO fetching error: ${String(error)}`)
+		}
+	}
+}
+
+const handleIPOResults = async () => {
 	try {
 		logMessage("Checking IPO results...")
 		const results: string[] = await getResults()
@@ -81,9 +109,20 @@ export const checkAndNotifyNewIPOs = async () => {
 		}
 	} catch (error) {
 		console.error("Error in IPO results:", error)
-		await reportError(`IPO results error: ${String(error)}`)
-		logMessage("Error occurred in IPO results checking.")
+
+		const serverDownMessage = getServerDownMessage(error)
+		if (serverDownMessage) {
+			await reportError(`IPO results checking failed: ${serverDownMessage}`)
+			logMessage(`IPO results checking failed: ${serverDownMessage}`)
+		} else {
+			await reportError(`IPO results error: ${String(error)}`)
+		}
 	}
+}
+
+export const checkAndNotifyNewIPOs = async () => {
+	// Run both IPO fetching and IPO results checking concurrently
+	await Promise.all([handleIPOFetching(), handleIPOResults()])
 
 	logMessage("Script execution completed.", "END")
 }
