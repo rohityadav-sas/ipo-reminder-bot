@@ -4,7 +4,7 @@
 	"main": "build//index.js",
 	"type": "module",
 	"scripts": {
-		"start": "tsc && node --env-file=.env build//index.js",
+		"start": "tsc && node build//index.js",
 		"build": "tsc",
 		"deploy": "node build//index.js"
 	},
@@ -20,11 +20,13 @@
 	"description": "IPO Telegram Bot to get latest IPOs from NEPSE",
 	"dependencies": {
 		"axios": "^1.8.1",
+		"dotenv": "^17.2.2",
 		"puppeteer": "^24.4.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.13.9",
 		"@types/puppeteer": "^5.4.7",
+		"tsx": "^4.20.6",
 		"typescript": "^5.9.2"
 	}
 }

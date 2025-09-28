@@ -1,5 +1,3 @@
-import { IPOData } from "../types/ipoTypes.js"
-
 export function formatIpoMessage(ipo: IPOData): string {
 	return (
 		`📢 <b>New ${ipo.shareTypeName} Announcement!</b> 📢\n` +

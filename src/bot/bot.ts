@@ -8,7 +8,6 @@ import {
 	formatIpoMessage,
 	formatIPOresultMessage,
 } from "../utils/postFormat.js"
-import { IPOData } from "../types/ipoTypes.js"
 
 const DATA_FILES = {
 	ipos: "data/ipos.json",
@@ -123,8 +122,7 @@ const handleIPOResults = async () => {
 }
 
 export const checkAndNotifyNewIPOs = async () => {
-	// Run both IPO fetching and IPO results checking concurrently
-	Promise.all([handleIPOFetching(), handleIPOResults()]).then(() => {
+	return Promise.all([handleIPOFetching(), handleIPOResults()]).then(() => {
 		logMessage("Script execution completed.", "END")
 		return
 	})
